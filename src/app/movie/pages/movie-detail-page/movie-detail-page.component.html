@@ -1,0 +1,6 @@
+<ng-container *ngIf="movie$ | async as movie; else loading_template">
+  <app-movie-preview (movieChange)="onMovieChange($event)" [movie]="movie"></app-movie-preview>
+</ng-container>
+<ng-template #loading_template>
+  <div class="spinner"></div>>
+</ng-template>

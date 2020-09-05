@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let movie of movies$ | async | sort:'title'">
+      <app-movie-preview (clickCover)="onClickMovieCover($event)" (movieChange)="onMovieChange($event)" [movie]="movie"></app-movie-preview>
+    </ng-container>
+  </div>
+</div>

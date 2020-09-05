@@ -1,0 +1,18 @@
+{
+  "movies": [
+    {
+      "id": 0,
+      "image": "https://lumiere-a.akamaihd.net/v1/images/avatar_800x1200_208c9665.jpeg?region=0%2C0%2C800%2C1200",
+      "releaseDate": 1230768000,
+      "title": "Avatar",
+      "director": "James Cameron"
+    },
+    {
+      "id": 1,
+      "image": "https://media.senscritique.com/media/000019230851/source_big/2001_L_Odyssee_de_l_espace.jpg",
+      "releaseDate": -63158400,
+      "title": "2001, L'odyssée de l'espace",
+      "director": "Stanley Kubrick"
+    }
+  ]
+}

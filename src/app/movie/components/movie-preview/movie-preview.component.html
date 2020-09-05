@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="section media" style="height:420px;cursor: pointer;" (click)="onClickCover()">
+        <img [src]="movie.image" alt="Cover of {{ movie.title }}">
+    </div>
+    <div class="section">
+        <h3 [ngClass]="getTitleClasses()">{{ movie.title }} <small>par <strong>{{ movie.director }}</strong></small></h3>
+    </div>
+    <div class="section" style="text-align: center">
+        <h5 class="bold">{{ movie.releaseDate * 1000 | date:'yyyy' }}</h5>
+    </div>
+    <div *ngIf="!updateState; else update_template" class="section" style="text-align: center;">
+        <button (click)="onClickUpdateButton()">Update</button>
+    </div>
+    <ng-template #update_template>
+        <div class="section" style="text-align: center;">
+            <input type="text" [(ngModel)]="movie.title">
+            <button (click)="onClickOkButton()">OK</button>
+        </div>
+    </ng-template>
+</div>

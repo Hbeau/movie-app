@@ -1,0 +1,13 @@
+<header>
+  <a routerLink="/home" routerLinkActive="active" class="logo">Home</a>
+  <a routerLink="/movie/list" routerLinkActive="active" class="button">Movies</a>
+  <a routerLink="/about" routerLinkActive="active" class="button">About</a>
+  <div style="float: right" *ngIf="!(logged$ | async); else logged_template">
+    <a routerLink="/user/login" routerLinkActive="active" class="button">Login</a>
+  </div>
+  <ng-template #logged_template>
+    <div style="float: right">
+      <a routerLink="/user" routerLinkActive="active" class="button">Account</a>
+    </div>
+  </ng-template>
+</header>
